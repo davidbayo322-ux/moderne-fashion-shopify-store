@@ -1,0 +1,24 @@
+/* =====================================
+   MODERNE Shopify Theme
+   Author: David Bayo
+===================================== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.product-card {
+    transition: .3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
