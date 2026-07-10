@@ -1,0 +1,30 @@
+<footer class="site-footer">
+
+  <div class="container">
+
+    <div class="footer-brand">
+      <h3>{{ shop.name }}</h3>
+      <p>Modern fashion designed for everyday confidence.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/collections/all">Shop</a>
+      <a href="/pages/contact">Contact</a>
+      <a href="/policies/privacy-policy">Privacy Policy</a>
+    </div>
+
+    <div class="footer-copy">
+      <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": []
+}
+{% endschema %}
