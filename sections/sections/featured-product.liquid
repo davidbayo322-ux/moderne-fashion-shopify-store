@@ -1,0 +1,47 @@
+<section class="featured-product">
+  <div class="page-width">
+    {% assign product = all_products[section.settings.product] %}
+
+    {% if product %}
+      <div class="featured-product__content">
+        <div class="featured-product__image">
+          {{ product.featured_image | image_url: width: 800 | image_tag }}
+        </div>
+
+        <div class="featured-product__details">
+          <h2>{{ product.title }}</h2>
+
+          <p>{{ product.price | money }}</p>
+
+          <div class="product-description">
+            {{ product.description | strip_html | truncate: 180 }}
+          </div>
+
+          <a href="{{ product.url }}" class="button">
+            Shop Now
+          </a>
+        </div>
+      </div>
+    {% else %}
+      <p>Please select a product in the theme editor.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Product",
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Product"
+    }
+  ]
+}
+{% endschema %}
