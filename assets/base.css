@@ -1,0 +1,37 @@
+:root {
+  --color-background: #ffffff;
+  --color-text: #1a1a1a;
+  --color-primary: #111111;
+  --color-secondary: #666666;
+  --border-radius: 8px;
+  --page-width: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.page-width {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
